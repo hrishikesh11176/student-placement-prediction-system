@@ -46,7 +46,7 @@ if st.button("Predict Placement"):
 
     prediction = model.predict(input_df)
 
-    if prediction[0] >= 0.5:
-        st.success(" Prediction : Congratulations! You Are Placed")
+    if prediction[0] == 1:
+        st.success(" Prediction : 🎉Congratulations! You Are Placed")
     else:
-        st.error(" Prediction : Sorry! Not Placed, Better Luck Next time")
+        st.error(" Prediction : 😔Sorry! Not Placed, Better Luck Next time")
